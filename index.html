@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Regístrate en Niver Latte</title>
+</head>
+<body>
+
+    <div class="pantalla-registro-container">
+        
+        <!-- COLUMNA IZQUIERDA: DISEÑO INSPIRACIONAL CON VIDEO DE FONDO -->
+        <div class="columna-izquierda-info" style="position: relative; overflow: hidden;">
+            
+            <!-- 🎥 VIDEO AGREGADO COMO FONDO DE LA COLUMNA -->
+            <video autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+                <source src="NIVERMP4.mp4" type="video/mp4">
+            </video>
+
+            <!-- CAPA OSCURA PARA QUE LAS LETRAS BLANCAS QUEDEN POR ENCIMA Y SE LEAN PERFECTO -->
+            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(22, 15, 11, 0.3), rgba(16, 15, 11, 0.7)); z-index: 2;"></div>
+
+            <!-- TUS TEXTOS ORIGINALES (Flotando sobre el video con z-index 3) -->
+            <div class="banner-marca-tag" style="position: relative; z-index: 3;">NIVER LATTE</div>
+            
+            <h2 class="texto-inspiracional" style="position: relative; z-index: 3;">
+                Hagamos que <br>
+                suceda <br>
+                <span>juntos.</span>
+            </h2>
+            
+            <!-- Eliminamos el aro circular anterior para que no tape tu video de fondo -->
+        </div>
+
+        <!-- COLUMNA DERECHA: FORMULARIO DE ACCESO (TU CÓDIGO INTACTO) -->
+        <div class="columna-derecha-formulario">
+            <div class="encabezado-form">
+                <span class="logo-co">☕</span>
+                <p class="cambio-sesion">¿Ya tienes una cuenta? <a href="paginaprincipal.html">Iniciar sesión</a></p>
+            </div>
+
+            <div class="bloque-campos-wrapper">
+                <h1 class="titulo-crear-cuenta">Crear una Cuenta</h1>
+                
+                <form id="formRegistro" action="./paginaprincipal.html" class="formulario-inputs" novalidate>
+                    <div class="fila-doble-inputs">
+                        <div class="grupo-input">
+                            <label>Nombre</label>
+                            <input type="text" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="grupo-input">
+                            <label>Apellido</label>
+                            <input type="text" placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label>Correo Electrónico</label>
+                        <input type="email" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label>Contraseña</label>
+                        <input type="password" placeholder="Mínimo 8 caracteres" required>
+                    </div>
+
+                    <div class="terminos-checkbox">
+                        <input type="checkbox" id="tyc" required>
+                        <label for="tyc">Al crear tu cuenta aceptas nuestros <a href="#">Términos y Condiciones</a>.</label>
+                    </div>
+
+                    <!-- TU BOTÓN DIRECTO QUE LLEVA A LA PÁGINA PRINCIPAL -->
+                    <a href="./paginaprincipal.html" class="btn-enviar-registro" style="display: block; text-align: center; text-decoration: none; background-color: #ffffff; color: #160f0b; padding: 16px; border-radius: 10px; font-size: 14px; font-weight: 700; box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);">
+                        Crear Cuenta
+                    </a>
+                </form>
+
+                <div class="separador-social"><span>O regístrate con</span></div>
+
+                <div class="botones-sociales-row">
+                    <button class="btn-social fb">Facebook</button>
+                    <button class="btn-social google">Google</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
