@@ -1,0 +1,284 @@
+/* ==========================================================================
+   ESTILOS PREMIUM PARA FORMULARIO DE REGISTRO EN DOS COLUMNAS - SEPARADO
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+:root {
+    --bg-espresso-profundo: #160f0b;
+    --bg-espresso-suave: #231912;
+    --oro-crema: #c5a880;
+    --naranja-neon: #c85a32;
+    --font-interface: 'Plus Jakarta Sans', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-interface);
+    background-color: var(--bg-espresso-profundo);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal estructurado con Flexbox simétrico */
+.pantalla-registro-container {
+    width: 100%;
+    max-width: 1200px;
+    height: 750px;
+    background-color: var(--bg-espresso-suave);
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex; /* Alinea las dos columnas una al lado de la otra */
+    align-items: stretch; /* Fuerza a ambas columnas a medir exactamente el mismo alto */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6), 0 0 40px rgba(200, 90, 50, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* -----------------------------------------
+   COLUMNA IZQUIERDA: LADO DEL VIDEO
+   ----------------------------------------- */
+.columna-izquierda-info {
+    width: 45%;
+    position: relative; /* Obligatorio para contener elementos absolutos abajo */
+    overflow: hidden; /* Corta el video excedente para respetar las esquinas redondeadas */
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Fuerza al video a rellenar el 100% de la columna de fondo */
+.video-background-premium {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adapta el video perfectamente sin deformarlo */
+    z-index: 1; /* Capa del fondo */
+}
+
+/* Capa de contraste oscura por encima del video para mejorar la lectura */
+.capa-oscura-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(22, 15, 11, 0.3), rgba(16, 15, 11, 0.75));
+    z-index: 2;
+}
+
+/* Asegurar que el texto flote de forma limpia por encima del video y la capa */
+.banner-marca-tag,
+.texto-inspiracional {
+    position: relative;
+    z-index: 3; /* Por encima de la capa oscura */
+}
+
+.banner-marca-tag {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--naranja-neon);
+    font-size: 14px;
+}
+
+.texto-inspiracional {
+    font-size: 2.8rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #ffffff;
+    text-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+.texto-inspiracional span {
+    color: var(--oro-crema);
+}
+
+/* -----------------------------------------
+   COLUMNA DERECHA: FORMULARIO
+   ----------------------------------------- */
+.columna-derecha-formulario {
+    width: 55%;
+    background-color: #1a120e;
+    padding: 50px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.encabezado-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-co {
+    font-size: 24px;
+}
+
+.cambio-sesion {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.cambio-sesion a {
+    color: var(--oro-crema);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.bloque-campos-wrapper {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.titulo-crear-cuenta {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+/* Estructura del Formulario */
+.formulario-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila-doble-inputs {
+    display: flex;
+    gap: 20px;
+}
+
+.grupo-input {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex: 1;
+}
+
+.grupo-input label {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.5px;
+}
+
+.grupo-input input {
+    background-color: var(--bg-espresso-profundo);
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    padding: 14px 16px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: var(--font-interface);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: var(--naranja-neon);
+    box-shadow: 0 0 10px rgba(200, 90, 50, 0.3);
+}
+
+.terminos-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.4;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+.terminos-checkbox input {
+    margin-top: 2px;
+}
+
+.terminos-checkbox a {
+    color: var(--oro-crema);
+}
+
+/* Botón Principal */
+.btn-enviar-registro {
+    background-color: var(--naranja-neon);
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(200, 90, 50, 0.4);
+    transition: all 0.3s ease;
+}
+
+.btn-enviar-registro:hover {
+    background-color: #ffffff;
+    color: var(--bg-espresso-profundo);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.2);
+}
+
+/* Separadores de Redes Sociales */
+.separador-social {
+    text-align: center;
+    margin: 25px 0 20px 0;
+    position: relative;
+}
+
+.separador-social::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.08);
+    z-index: 1;
+}
+
+.separador-social span {
+    background-color: #1a120e;
+    padding: 0 15px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    position: relative;
+    z-index: 2;
+}
+
+.botones-sociales-row {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-social {
+    flex: 1;
+    background: transparent;
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-social:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
